@@ -76,3 +76,35 @@ With the current directory :
     -rwxr-xr-x   1 yvonnickesnault  admin  6924 13 mar 23:45 soapowerctl.sh
     drwxr-xr-x   8 yvonnickesnault  admin   272 14 mar 22:36 .
 
+
+Starting Soapower
+-----------------
+
+.. code-block:: sh
+
+    /opt/soapower/current$ ./soapowerctl.sh start
+    Soapower Home: /opt/soapower, port : 9010
+    Soapower Current: /opt/soapower/current
+    Checking bin/soapower file...
+    Checking java version...
+    ok, java is 1.7 or newer
+    Starting Soapower...
+    Status (all instances of soapower are scanned):
+    Soapower is started with pid:1622 and http.port:9010
+
+A file `RUNNING_PID` is created in `/opt/soapower/current`. This file contains the pid of Soapower.
+
+
+Stopping Soapower
+-----------------
+
+.. code-block:: sh
+
+    /opt/soapower/current$ ./soapowerctl.sh stop
+    Soapower Home: /opt/soapower, port : 9010
+    Soapower Current: /opt/soapower/current
+    Checking bin/soapower file...
+    Checking java version...
+    ok, java is 1.7 or newer
+    Stopping Soapower (on running http.port 9010)...
+
