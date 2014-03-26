@@ -7,10 +7,10 @@ Send a request on a service already configured
 
 Send a request on a service not configured
 ----------------------------------------------
-Auto register service by calling 
+Auto register service by calling
 ``http://<server>:<port>/autosoap/<group>/<environment>/<remoteTarget>``
 
-Example : 
+Example :
 ``http://localhost:9010/autosoap/myNewGroup/myNewEnvironment/http://localhost:8080/myWebservices``
 
 
@@ -25,5 +25,4 @@ If a SoapAction's response time is > threshold, a failed test is generate and vi
      rm *.xml ; wget http://<server>:<port>/statsAsJunit/yesterday/yesterday/ -O result.xml
 
 * Add a publish test Junit to view all SoapAction's result time.
-* Url parameters : ``http://<server>:<port>/statsAsJunit/<minDate>/<maxDate>/`` with minDate / maxDate like : ``2012-11-29``, ``yesterday``, ``today``
-
+* Url parameters : ``http://<server>:<port>/statsAsJunit/<minDate>/<maxDate>/`` with minDate / maxDate like : ``2012-12-10T00:00``, ``yesterday``, ``today``
