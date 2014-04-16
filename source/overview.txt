@@ -16,9 +16,9 @@ It is also possible to set a threshold response time on soapaction, the alerts a
 Administration interface is available for
 
 * Configure environments and webservices (local / remote target / timeout)
-* Set the thresholds for response time for each soapaction
+* Set the thresholds for response time for each serviceaction
 * Import / export service configurations & settings
-* Set the purges data XML Data requests & Answers, All Data / environment
+* Set the purges data Content Data requests & Answers, All Data / environment
 * Monitoring CPU / Heap Memory / logs file
 
 .. image:: _static/seqDiagram.png
