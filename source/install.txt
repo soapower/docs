@@ -1,7 +1,7 @@
 Quickstart
 ==========
 
-You can download it here : https://github.com/soapower/soapower/releases/download/1.3.2/soapower-1.3.2.zip
+You can download it here : https://github.com/soapower/soapower/releases/download/1.4.0/soapower-1.4.0.zip
 
 Requirements
 -----------
@@ -33,9 +33,9 @@ run these commands for a complete installation :
     $ export SOAPOWER_DB_URL="jdbc:mysql://localhost/soapower"
 
     $ mkdir -p /opt/soapower && cd /opt/soapower
-    $ wget --no-check-certificate https://github.com/soapower/soapower/releases/download/1.3.2/soapower-1.3.2.zip -O soapower-1.3.2.zip
-    $ unzip soapower-1.3.2.zip
-    $ rm -f current; ln -s soapower-1.3.2 current && cd current
+    $ wget --no-check-certificate https://github.com/soapower/soapower/releases/download/1.4.0/soapower-1.4.0.zip -O soapower-1.4.0.zip
+    $ unzip soapower-1.4.0.zip
+    $ rm -f current; ln -s soapower-1.4.0 current && cd current
     $ chmod +x soapowerctl.sh
     $ ./soapowerctl.sh configtest
     $ ./soapowerctl.sh start
