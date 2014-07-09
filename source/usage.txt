@@ -23,8 +23,8 @@ Jenkins Integration
 If a ServiceAction's response time is > threshold, a failed test is generate and visible on Jenkins.
 
 * Create a job, with a shell execution:
-.. code-block:: sh
-     rm *.xml ; wget http://<server>:<port>/statsAsJunit/yesterday/yesterday/ -O result.xml
+
+``rm *.xml ; wget http://<server>:<port>/statsAsJunit/yesterday/yesterday/ -O result.xml``
 
 * Add a publish test Junit to view all ServiceAction's result time.
 * Url parameters : ``http://<server>:<port>/statsAsJunit/<minDate>/<maxDate>/`` with minDate / maxDate like : ``2012-12-10T00:00``, ``yesterday``, ``today``

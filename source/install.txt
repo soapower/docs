@@ -3,8 +3,8 @@ Quickstart
 
 You have to use docker to run Soapower.
 
-.. code-block:: sh
-    docker run -i -d -p 49010:9010 t -v /data/soapower/mongodb:/data/db -v /data/soapower/backups:/opt/soapower/backups yesnault/docker-soapower:200
+
+``docker run -i -d -p 49010:9010 t -v /data/soapower/mongodb:/data/db -v /data/soapower/backups:/opt/soapower/backups yesnault/docker-soapower:200``
 
 
 Check Installation
