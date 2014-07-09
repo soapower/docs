@@ -1,4 +1,4 @@
 Development
 ===========
 
-See https://github.com/soapower/soapower/wiki
+Go to https://github.com/soapower/soapower

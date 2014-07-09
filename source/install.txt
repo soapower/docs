@@ -1,78 +1,25 @@
 Quickstart
 ==========
 
-You can download it here : https://github.com/soapower/soapower/releases/download/1.4.0/soapower-1.4.0.zip
-
-Requirements
------------
-
-* JDK >= 1.7, add JAVA_HOME to your path
-* Mysql 5 with a soapower user (with password soapower, associated to a soapower database). You can choose another name or password by editing exporting SOAPOWER_DB_USER and SOAPOWER_DB_PASSWORD, see below.
-
-
-Installation
---------
-
-run these commands for a complete installation :
+You have to use docker to run Soapower.
 
 .. code-block:: sh
+    docker run -i -d -p 49010:9010 t -v /data/soapower/mongodb:/data/db -v /data/soapower/backups:/opt/soapower/backups yesnault/docker-soapower:200
 
-    # Optional - Set Soapower Home (optional if your home is /opt/soapower/)
-    $ export SOAPOWER_HOME="/opt/soapower/"
-
-    # Optional - Set Soapower Http Listen Port (default value: 9010)
-    $ export SOAPOWER_HTTP_PORT=9010
-
-    # Optional - Set Soapower Http Listen Port (default value: soapower)
-    $ export SOAPOWER_DB_USER=soapower
-
-    # Optional - Set Soapower Http Listen Port (default value: soapower)
-    $ export SOAPOWER_DB_PASSWORD=soapower
-
-    # Optional - Set Soapower Http Listen Port (default value: jdbc:mysql://localhost/soapower)
-    $ export SOAPOWER_DB_URL="jdbc:mysql://localhost/soapower"
-
-    $ mkdir -p /opt/soapower && cd /opt/soapower
-    $ wget --no-check-certificate https://github.com/soapower/soapower/releases/download/1.4.0/soapower-1.4.0.zip -O soapower-1.4.0.zip
-    $ unzip soapower-1.4.0.zip
-    $ rm -f current; ln -s soapower-1.4.0 current && cd current
-    $ chmod +x soapowerctl.sh
-    $ ./soapowerctl.sh configtest
-    $ ./soapowerctl.sh start
 
 Check Installation
 ------------------
 
-* Go to http://localhost:9010
+* Go to http://localhost:49010
 
 
-Starting Soapower
------------------
+Tips
+-----
 
+* You can forward port of mongoDB -p 49011:29017 
+* There is a backup of configuration in directory /data/soapower/backups. The backup is made by a job in the crontab (at 23h30)
+* If you forward the ssh port -p 49012:22, you can connect to your container with :
 .. code-block:: sh
+    ssh admin@localhost -p 49012
+    sudo su #to become root in the container
 
-    /opt/soapower/current$ ./soapowerctl.sh start
-    Soapower Home: /opt/soapower, port : 9010
-    Soapower Current: /opt/soapower/current
-    Checking bin/soapower file...
-    Checking java version...
-    ok, java is 1.7 or newer
-    Starting Soapower...
-    Status (all instances of soapower are scanned):
-    Soapower is started with pid:1622 and http.port:9010
-
-A file `RUNNING_PID` is created in `/opt/soapower/current`. This file contains the pid of Soapower.
-
-
-Stopping Soapower
------------------
-
-.. code-block:: sh
-
-    /opt/soapower/current$ ./soapowerctl.sh stop
-    Soapower Home: /opt/soapower, port : 9010
-    Soapower Current: /opt/soapower/current
-    Checking bin/soapower file...
-    Checking java version...
-    ok, java is 1.7 or newer
-    Stopping Soapower (on running http.port 9010)...

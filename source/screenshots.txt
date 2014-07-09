@@ -9,18 +9,27 @@ Search Page
 ---------
 .. image:: _static/search.png
 
-Statistics
+Analysis
 ---------
-.. image:: _static/stats.png
+.. image:: _static/analysis.png
 
 Monitoring
 ---------
 .. image:: _static/monitoring.png
 
+Environments
+---------
+.. image:: _static/environments.png
+
+Edit an environment
+---------
+.. image:: _static/editEnvironment.png
+
+Services
+---------
+.. image:: _static/services.png
+
 Edit a service
 ---------
 .. image:: _static/editService.png
 
-Admin
-------
-.. image:: _static/admin.png
