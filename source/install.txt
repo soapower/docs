@@ -19,7 +19,7 @@ Tips
 * You can forward port of mongoDB -p 49011:29017 
 * There is a backup of configuration in directory /data/soapower/backups. The backup is made by a job in the crontab (at 23h30)
 * If you forward the ssh port -p 49012:22, you can connect to your container with :
-.. code-block:: sh
-    ssh admin@localhost -p 49012
-    sudo su #to become root in the container
+
+``ssh admin@localhost -p 49012``
+``sudo su #to become root in the container``
 
